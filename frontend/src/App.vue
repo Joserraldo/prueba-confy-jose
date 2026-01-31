@@ -269,7 +269,7 @@ const guardar = async () => {
   loading.value = true
 
   try {
-    await axios.post('https://us-central1-prueba-confy-jose.cloudfunctions.net/clientes', form.value)
+    await axios.post('http://localhost:5000/clientes', form.value)
     success.value = 'Cliente registrado exitosamente'
     resetForm()
     await cargarClientes()
